@@ -1,0 +1,17 @@
+#!/bin/sh
+
+DIR=$(dirname $0)
+SHARE=$DIR/../share/lifelog
+
+if ! [ -f "$1" ] ; then
+    echo "File not found: $1" 1>&2
+    exit 1
+fi
+
+cat $SHARE/_preamble.html
+cat $SHARE/css/*.css
+cat $SHARE/_interamble.html
+
+awk -f $SHARE/lifelog.awk "$@"
+
+cat $SHARE/_postamble.html
