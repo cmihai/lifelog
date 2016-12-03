@@ -2,6 +2,8 @@
 
 Transform bite-sized Markdown diary pages into pretty HTML.
 
+Requires a [`markdown`](https://daringfireball.net/projects/markdown/) tool on your computer.
+
 Sample source file:
 
     2017-01-01
